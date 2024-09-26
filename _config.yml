@@ -172,6 +172,7 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - bundles
 keep_files:
   - .git
   - .svn

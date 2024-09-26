@@ -37,6 +37,8 @@ GEM
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
       net-http
+    faraday-retry (2.2.1)
+      faraday (~> 2.0)
     ffi (1.17.0)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
@@ -266,10 +268,20 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  dnsruby (~> 1.72.1)
+  faraday (~> 2.9.2)
+  faraday-net_http (~> 3.1.0)
+  faraday-retry
+  ffi (~> 1.17.0)
   github-pages
-  hawkins
+  hawkins (~> 2.0.5)
+  jekyll (~> 3.9.5)
+  jekyll-commonmark-ghpages (~> 0.4.0)
   jekyll-feed
   jekyll-sitemap
+  nokogiri (~> 1.16.6)
+  racc (~> 1.8.0)
+  rexml (~> 3.3.1)
   webrick (~> 1.8)
 
 BUNDLED WITH

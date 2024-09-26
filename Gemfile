@@ -23,6 +23,16 @@ group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
   gem "webrick", "~> 1.8"
+  gem "hawkins", "~> 2.0.5"
+  gem "jekyll", "~> 3.9.5"
+  gem "jekyll-commonmark-ghpages", "~> 0.4.0"
+  gem "nokogiri", "~> 1.16.6"
+  gem "dnsruby", "~> 1.72.1"
+  gem "rexml", "~> 3.3.1"
+  gem "racc", "~> 1.8.0"
+  gem "faraday", "~> 2.9.2"
+  gem "faraday-net_http", "~> 3.1.0"
+  gem "ffi", "~> 1.17.0"
+  gem "faraday-retry"
 end
