@@ -61,6 +61,8 @@ When we lift these through Ghidra's P-Code (which we used in [Cimalir](/posts/20
 
 ## Why this matters for malware analysis
 
+![ESIL pipeline diagram](/images/esil-diagram.svg)
+
 IoT malware authors compile the same source code for ARM, MIPS, x86, PowerPC, and more — all to infect different devices. A single botnet like Mirai ships binaries for 5+ architectures. If your analysis tools only work on one instruction set at a time, you need separate models, separate features, and separate training data for each architecture. That doesn't scale.
 
 ESIL lets us build **one model that works across all architectures**. Here's what the pipeline looks like in CIAO:
