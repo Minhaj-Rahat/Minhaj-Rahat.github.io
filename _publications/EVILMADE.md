@@ -27,5 +27,10 @@ citation: '@INPROCEEDINGS{10427780,
   doi={10.1109/CCWC60891.2024.10427780}}
 '
 ---
-
+**[Download PDF](/files/Evil_Maids.pdf)** | [Blog Post](/posts/2024/02/evil-maids-iot-firmware-security/)
+ 
+**Best Paper Award — IEEE CCWC 2024**
+ 
+## Abstract
+ 
 The Internet of Things (IoT) revolution has transformed everyday consumer objects into interconnected, intelligent devices. Due to historically weak security designs, these devices are susceptible to compromises with far-reaching consequences. This paper aims to evaluate the current state of IoT device firmware security and assess the effectiveness of existing methods in safeguarding sensitive data. We conducted a manual analysis of 16 IoT devices, revealing a range of firmware management techniques, each varying in their effectiveness against an evil maid attack scenario. Out of the 16 devices, only 2 showed evidence of encrypting data at rest, despite 10 having crypto-enabled hardware. Additionally, 9 out of 16 devices possessed secure boot-enabled hardware, but 4 of them did not properly utilize or implement secure boot. Consequently, 13 devices were identified as vulnerable to sensitive data compromise, and 11 were at risk of firmware modification attacks. To address these critical security gaps, this study proposes a method for analyzing data-at-rest encryption and secure boot status in IoT devices. In this paper we shed light on the prevailing security shortcomings and provide practical analysis techniques to foster improved IoT device security and user data protection. 
