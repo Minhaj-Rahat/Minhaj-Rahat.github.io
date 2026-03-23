@@ -27,7 +27,7 @@ citation: '@INPROCEEDINGS{10427780,
   doi={10.1109/CCWC60891.2024.10427780}}
 '
 ---
-**[Download PDF](/files/Evil_Maids.pdf)** | [Blog Post](/posts/2024/02/evil-maids-iot-firmware-security/)
+**[PDF](/files/Evil_Maids.pdf)** | [Blog Post](/posts/2024/02/evil-maids-iot-firmware-security/)
  
 **Best Paper Award — IEEE CCWC 2024**
  
