@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am Minhajul Alam Rahat, a fourth-year PhD student in the [Computer Science Department](https://eas.uccs.edu/departments/computer-science) at the *University of Colorado Colorado Springs*. I work as a research assistant under the supervision of [Dr. Yanyan Zhuang](https://cs.uccs.edu/~yzhuang/) and [Dr. Gedare Bloom](https://cs.uccs.edu/~gbloom/). I was selected as an **O'NEIL Cyber Scholar** in 2024.
+I am Minhajul Alam Rahat, aPhD candidate in the [Computer Science Department](https://eas.uccs.edu/departments/computer-science) at the *University of Colorado Colorado Springs*. I work as a research assistant under the supervision of [Dr. Yanyan Zhuang](https://cs.uccs.edu/~yzhuang/) and [Dr. Gedare Bloom](https://cs.uccs.edu/~gbloom/). I was selected as an **O'NEIL Cyber Scholar** in 2024.
 
 My research focuses on **IoT malware analysis**. I reverse engineer malware binaries, design automated cross-architecture analysis tools, investigate malware family classification using machine learning, and study the malware development lifecycle. My tools work across ARM, MIPS, x86, and PowerPC architectures using intermediate representations and graph-based learning.
 
