@@ -9,7 +9,7 @@ tags:
   - Tutorial
 ---
 
-If you've ever tried to compare a malware binary compiled for ARM with one compiled for MIPS, you've hit the wall: completely different opcodes, different register names, different instruction formats. It's like trying to compare a book written in Japanese with one written in Arabic — you can't do character-by-character matching, because the alphabets have nothing in common.
+If you've ever tried to compare a malware binary compiled for ARM with one compiled for MIPS, you've hit the wall: completely different opcodes, different register names, different instruction formats. It's like trying to compare a book written in Japanese with one written in Arabic, you can't do character-by-character matching, because the alphabets have nothing in common.
 
 But what if you could translate both books into English first?
 
@@ -164,10 +164,10 @@ The broader lesson: **the choice of IR depends on what you're optimizing for.** 
 
 Intermediate representations are a quiet superpower in binary analysis. They let you write tools that work across architectures without the combinatorial explosion of handling each ISA separately. Whether you're building a malware classifier, a vulnerability scanner, or a binary similarity engine, the first question is always: *at what level of abstraction should I analyze?*
 
-For us, ESIL + normalization + transformer embeddings turned out to be the right recipe for cross-architecture malware classification. But the same principle — translate first, then analyze — applies far beyond malware.
+For us, ESIL + normalization + transformer embeddings turned out to be the right recipe for cross-architecture malware classification. But the same principle, translate first, then analyze, applies far beyond malware.
 
 If you want to dive deeper, check out the [CIAO paper](/posts/2025/10/ciao-cross-architecture-iot-malware/) and the [source code](https://github.com/ssluc/CIAO). The ESIL documentation is at [radare2's book](https://book.rada.re/esil.html).
 
 ---
 
-*This is part of my PhD research at UC Colorado Springs. If you're working with intermediate representations for binary analysis or security — whether ESIL, P-Code, LLVM IR, or something else — I'd love to hear about your experience. Reach out on [LinkedIn](https://linkedin.com/in/minhajul-alam-rahat-1aa157157) or email me at mrahat@uccs.edu.*
+*This is part of my PhD research at UC Colorado Springs. If you're working with intermediate representations for binary analysis or security, whether ESIL, P-Code, LLVM IR, or something else, I'd love to hear about your experience. Reach out on [LinkedIn](https://linkedin.com/in/minhajul-alam-rahat-1aa157157) or email me at mrahat@uccs.edu.*
