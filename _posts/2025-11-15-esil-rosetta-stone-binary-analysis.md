@@ -59,7 +59,7 @@ In ESIL, both become something like:
 
 After normalization (replacing architecture-specific register names with `<REG>`), the ESIL is identical. The opcodes are gone. What remains is pure semantics.
 
-The same convergence happens at scale. Our [CIMALIR](/posts/2024/02/cimalir-cross-platform-malware-clustering/) paper's Figure 1 shows a full `average(a, b)` function lifted through Ghidra's P-Code, the operations `INT_ADD`, `INT_SDIV`, `COPY`, `RETURN` are the same for both x86 and ARM. ESIL achieves the same effect with a more compact, stack-based syntax that's easier to tokenize for ML pipelines.
+We can definitely use other IR for this purpose. For example, our [CIMALIR](/posts/2024/02/cimalir-cross-platform-malware-clustering/) paper's Figure 1 shows a full `average(a, b)` function when lifted through Ghidra's P-Code, the operations `INT_ADD`, `INT_SDIV`, `COPY`, `RETURN` are the same for both x86 and ARM. ESIL achieves the same effect with a more compact, stack-based syntax that's easier to tokenize for ML pipelines.
 
 ## Why this matters for malware analysis
 
