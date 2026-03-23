@@ -17,7 +17,7 @@ That's essentially what ESIL does for binary analysis. It's the secret weapon be
 
 ## What is ESIL?
 
-ESIL stands for **Evaluable Strings Intermediate Language**. It's radare2's intermediate representation — a way to express what any instruction *does* in a common format, regardless of which CPU it was written for.
+ESIL stands for **Evaluable Strings Intermediate Language**. It's radare2's intermediate representation, a way to express what any instruction *does* in a common format, regardless of which CPU it was written for.
 
 Here's the core idea. Consider this simple operation: loading a value from memory into a register. On MIPS, it looks like this:
 
@@ -25,7 +25,7 @@ Here's the core idea. Consider this simple operation: loading a value from memor
 lw v0, 0x878(fp)
 ```
 
-This loads a 4-byte word from the address `fp + 0x878` into register `v0`. On ARM, the same operation would use completely different syntax — `LDR`, different register names, different addressing modes.
+This loads a 4-byte word from the address `fp + 0x878` into register `v0`. On ARM, the same operation would use completely different syntax, `LDR`, different register names, different addressing modes.
 
 But in ESIL, the MIPS instruction above becomes:
 
@@ -63,7 +63,7 @@ The same convergence happens at scale. The CIAO paper's Figure 1 shows a full `a
 
 ## Why this matters for malware analysis
 
-IoT malware authors compile the same source code for ARM, MIPS, x86, PowerPC, and more — all to infect different devices. A single botnet like Mirai ships binaries for 5+ architectures. If your analysis tools only work on one instruction set at a time, you need separate models, separate features, and separate training data for each architecture. That doesn't scale.
+IoT malware authors compile the same source code for ARM, MIPS, x86, PowerPC, and more, all to infect different devices. A single botnet like Mirai ships binaries for 5+ architectures. If your analysis tools only work on one instruction set at a time, you need separate models, separate features, and separate training data for each architecture. That doesn't scale.
 
 ESIL lets us build **one model that works across all architectures**. Here's what the pipeline looks like in CIAO:
 
@@ -82,7 +82,7 @@ The key steps:
 4. **Embed** — train Word2Vec on the token sequences so semantically equivalent tokens from different architectures land near each other in vector space
 5. **Aggregate** — feed the token embeddings through a transformer encoder to produce a single embedding per function
 
-After normalization, CIAO's entire vocabulary is just **130 tokens** — compared to 975 tokens when using raw opcodes. A smaller vocabulary means less noise, faster training, and better generalization.
+After normalization, CIAO's entire vocabulary is just **130 tokens**, compared to 975 tokens when using raw opcodes. A smaller vocabulary means less noise, faster training, and better generalization.
 
 ## Try it yourself in 30 seconds
 
@@ -98,7 +98,7 @@ Or to see just the ESIL column:
 $ r2 -q -c 'aaa; e asm.esil=true; pdf @ main' your_binary
 ```
 
-You'll see each instruction followed by its ESIL equivalent. Try it on the same source compiled for two different architectures — you'll see the ESIL converge even as the assembly diverges.
+You'll see each instruction followed by its ESIL equivalent. Try it on the same source compiled for two different architectures, you'll see the ESIL converge even as the assembly diverges.
 
 For a Python-based workflow (which is what CIAO uses), you can access ESIL through `r2pipe`:
 
@@ -143,7 +143,7 @@ def normalize_esil(esil_expr, special_regs={"sp", "pc", "gp"}):
     return ",".join(normalized)
 ```
 
-After normalization, the Word2Vec + transformer pipeline produces function embeddings that live in a shared semantic space. Two functions compiled from the same source for different CPUs end up as nearby vectors — which is exactly what we need for the downstream GNN to learn family-specific patterns from Function Call Graphs.
+After normalization, the Word2Vec + transformer pipeline produces function embeddings that live in a shared semantic space. Two functions compiled from the same source for different CPUs end up as nearby vectors, which is exactly what we need for the downstream GNN to learn family-specific patterns from Function Call Graphs.
 
 ## ESIL vs. other IRs
 
@@ -156,7 +156,7 @@ ESIL isn't the only game in town. Here's how it compares to alternatives we've u
 | **LLVM IR** | RetDec, McSema | Closest to source-level, optimizable | (not yet) |
 | **VEX** | angr/Valgrind | Well-suited for symbolic execution | (not yet) |
 
-We chose ESIL for CIAO because of its faster processing time and compact representation — important when you're processing 9,954 malware samples. For Cimalir, where we needed richer function attributes (caller/callee counts, control transfers), Ghidra's P-Code was the better fit.
+We chose ESIL for CIAO because of its faster processing time and compact representation, important when you're processing 9,954 malware samples. For Cimalir, where we needed richer function attributes (caller/callee counts, control transfers), Ghidra's P-Code was the better fit.
 
 The broader lesson: **the choice of IR depends on what you're optimizing for.** Speed and vocabulary size? ESIL. Semantic depth? P-Code or LLVM IR. Symbolic execution? VEX. There's no universal winner.
 
