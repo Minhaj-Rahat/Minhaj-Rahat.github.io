@@ -17,7 +17,7 @@ Our paper **Should Smart Homes Be Afraid of Evil Maids? Identifying Vulnerabilit
 
 ## The evil maid threat model
 
-The "evil maid" attack is a well-known concept in security: an attacker with physical access to an unattended device tampers with it in some undetectable way, then later accesses the device or the data on it. This is plausible for IoT devices — they sit in shared apartment buildings, hotels, schools, and offices. An attacker could pose as a technician, use insider privileges, or even buy used devices online.
+The "evil maid" attack is a well-known concept in security: an attacker with physical access to an unattended device tampers with it in some undetectable way, then later accesses the device or the data on it. This is plausible for IoT devices, they sit in shared apartment buildings, hotels, schools, and offices. An attacker could pose as a technician, use insider privileges, or even buy used devices online.
 
 Two attacks matter in this threat model: **private data theft** (extracting sensitive data from the device's storage) and **firmware modification** (replacing the firmware so the attacker gains persistent control). Defending against these requires two protection mechanisms:
 
