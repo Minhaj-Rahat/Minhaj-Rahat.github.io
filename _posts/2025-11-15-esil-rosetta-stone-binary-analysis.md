@@ -33,7 +33,7 @@ But in ESIL, the MIPS instruction above becomes:
 0x878,fp,+,[4],v0,=
 ```
 
-Read it right-to-left (it's a stack-based language): *take 0x878, add it to fp, read 4 bytes from that address, store in v0.* The opcode `lw` is gone. What remains is pure semantics — what the instruction *does*, not *how* a specific CPU encodes it.
+Read it right-to-left (it's a stack-based language): *take 0x878, add it to fp, read 4 bytes from that address, store in v0.* The opcode `lw` is gone. What remains is pure semantics, what the instruction *does*, not *how* a specific CPU encodes it.
 
 ## A real example: two architectures, one ESIL
 
