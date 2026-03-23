@@ -27,7 +27,7 @@ Research Experience
 ======
 * **Research Assistant**, University of Colorado Colorado Springs *(2021 – Present)*
   * Designed CIAO, a cross-architecture IoT malware classifier achieving 98.5% accuracy on 9,954 samples
-  * Developed Cimalir, a cross-platform malware clustering tool using LLVM intermediate representation
+  * Developed Cimalir, a cross-platform malware clustering tool using intermediate representation
   * Conducted firmware security analysis of 16 IoT devices, identifying encryption and secure boot gaps
   * Investigated operational similarity features across the malware development lifecycle
 
