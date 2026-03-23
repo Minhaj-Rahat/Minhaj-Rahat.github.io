@@ -27,5 +27,8 @@ citation: '@INPROCEEDINGS{10427663,
   doi={10.1109/CCWC60891.2024.10427663}}
 '
 ---
+**[PDF](/files/CIMALIR.pdf)** | [Source Code](https://github.com/Minhaj-Rahat/Cimalir) | [Blog Post](/posts/2024/02/cimalir-cross-platform-malware-clustering/)
+
+## Abstract
 
 The widespread adoption of Internet-of-Things (IoT) devices has significantly increased the interconnectivity of everyday activities. Malware on IoT devices directly jeopardize the security and privacy of their users, and device heterogeneity poses significant challenges in malware analysis. This paper presents Cimalir, which uses an automated approach for clustering malware that leverages an intermediate representation (IR) of low-level assembly code across different architectures. Cimalir uses a staged analysis approach that first filters binary images using set-based similarity of function attributes before applying call graph analysis. Additionally, Cimalir employs a string based technique to distinguish different malware families that exhibit a substantial level of shared code use. Cimalir has a low runtime complexity as evidenced by a linear relationship between execution time and the number of functions in the binary images under analysis. Experimental results show that Cimalir yields improved clustering results compared to the state-of-the-art binary analysis tool, BinDiff, when applied to malware binaries compiled for different instruction sets. Cimalir results in a DBCV score of 0.75 and Silhouette Score of 0.812 when clustering malware families from the CUBE-MALIOT-2021 dataset. In comparison, BinDiff achieves scores of 0.54 and 0.616, respectively. This indicates Cimalir’s superior performance compared to BinDiff. 
