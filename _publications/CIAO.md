@@ -4,6 +4,7 @@ collection: publications
 permalink: /publication/CIAO
 excerpt: 'This paper presents Ciao, which applies graph representation learning on Function Call Graphs (FCGs) to model function interaction and separate reused code from unique functionalities. It introduces a novel malware family classifier that learns archtecture-independent binary representation to enable cross-architecture generalization in malware classification.'
 venue: 'IEEE Consumer Communications & Networking Conference (CCNC)'
+paperurl: 'https://ieeexplore.ieee.org/abstract/document/11366435/'
 date: 2025-10-20
 
 ---
