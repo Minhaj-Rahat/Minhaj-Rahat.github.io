@@ -53,4 +53,3 @@ Publications
 Service & Leadership
 ======
 * Co-founder, UCCS Open Source Club
-* Reviewer for IEEE and ACM conferences
