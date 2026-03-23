@@ -37,31 +37,31 @@ Read it right-to-left (it's a stack-based language): *take 0x878, add it to fp, 
 
 ## A real example: two architectures, one ESIL
 
-Let's look at a function that computes the average of two integers. Here's what the compiled assembly looks like on each architecture:
+Let's look at a simple operation that appears in almost every function: loading a value from memory. Here's what it looks like on each architecture:
 
-**x86:**
-```nasm
-add    eax, edx       ; eax = a + b
-cdq                    ; sign-extend for division
-idiv   ecx            ; eax = (a+b) / 2
-ret
+**MIPS:**
+```
+lw     v0, 0x878(fp)     ; load 4 bytes from [fp + 0x878] into v0
 ```
 
 **ARM:**
 ```
-add    r0, r4, r5     ; r0 = a + b
-mov    r1, #2
-sdiv   r0, r0, r1     ; r0 = (a+b) / 2
-bx     lr
+ldr    r0, [fp, #0x878]  ; load 4 bytes from [fp + 0x878] into r0
 ```
 
-Different registers, different opcodes, different calling conventions. But the *operations* are identical: add two values, divide by two, return the result.
+Different opcodes (`lw` vs `ldr`), different register names (`v0` vs `r0`), different syntax for the memory offset. But both do the same thing: read 4 bytes from an address computed as frame pointer + offset.
 
-When we lift these through Ghidra's P-Code (which we used in [Cimalir](/posts/2024/02/cimalir-cross-platform-malware-clustering/)) or radare2's ESIL (which we use in CIAO), both architectures produce the same sequence of abstract operations: integer add, integer signed divide, copy, return. The architecture-specific noise is stripped away, and what remains is the program's logic.
+In ESIL, both become something like:
+
+```
+0x878,fp,+,[4],<REG>,=
+```
+
+After normalization (replacing architecture-specific register names with `<REG>`), the ESIL is identical. The opcodes are gone. What remains is pure semantics.
+
+The same convergence happens at scale. The CIAO paper's Figure 1 shows a full `average(a, b)` function lifted through Ghidra's P-Code — the operations `INT_ADD`, `INT_SDIV`, `COPY`, `RETURN` are the same for both x86 and ARM. ESIL achieves the same effect with a more compact, stack-based syntax that's easier to tokenize for ML pipelines.
 
 ## Why this matters for malware analysis
-
-![ESIL pipeline diagram](/images/esil-diagram.svg)
 
 IoT malware authors compile the same source code for ARM, MIPS, x86, PowerPC, and more — all to infect different devices. A single botnet like Mirai ships binaries for 5+ architectures. If your analysis tools only work on one instruction set at a time, you need separate models, separate features, and separate training data for each architecture. That doesn't scale.
 
