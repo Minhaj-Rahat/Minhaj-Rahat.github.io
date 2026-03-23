@@ -71,7 +71,7 @@ Getting the data off the storage chip was itself an exercise in how poorly some 
 
 ## The takeaway
 
-Only one manufacturer out of 16 — Samsung with the SmartThings hubs — implemented both data-at-rest encryption and proper secure boot. The gap between hardware capability and actual implementation was the most striking finding: most devices *have the silicon* for encryption and secure boot, but the manufacturers never turned it on.
+Only one manufacturer out of 16, Samsung with the SmartThings hubs, implemented both data-at-rest encryption and proper secure boot. The gap between hardware capability and actual implementation was the most striking finding: most devices *have the silicon* for encryption and secure boot, but the manufacturers never turned it on.
 
 These aren't exotic protections. Encrypting data at rest and verifying firmware signatures are solved problems at the hardware level. The challenge is a manufacturing culture where security features are available but not enabled, likely because they add development complexity and testing burden without visible consumer-facing benefit.
 
@@ -79,4 +79,4 @@ The paper is available on [IEEE Xplore](https://ieeexplore.ieee.org/abstract/doc
 
 ---
 
-*This work was a collaboration with Austen Knapp, Emmanuel Wamuo, Santiago Torres-Arias (Purdue), Gedare Bloom, and Yanyan Zhuang. If you're working on IoT firmware security or device hardening, I'd be glad to discuss our methodology — find me on [LinkedIn](https://linkedin.com/in/minhajul-alam-rahat-1aa157157) or email me at mrahat@uccs.edu.*
+*This work was a collaboration with Austen Knapp, Emmanuel Wamuo, Drs. Santiago Torres-Arias (Purdue), Gedare Bloom, and Yanyan Zhuang. If you're working on IoT firmware security or device hardening, I'd be glad to discuss our methodology — find me on [LinkedIn](https://linkedin.com/in/minhajul-alam-rahat-1aa157157) or email me at mrahat@uccs.edu.*
