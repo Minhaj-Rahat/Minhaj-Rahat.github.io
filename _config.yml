@@ -134,11 +134,14 @@ social:
 
 
 # Analytics
+#analytics:
+  #provider               :  "false"
+  #google:
+    #tracking_id          :
 analytics:
-  provider               :  "false"
+  provider: "google-analytics-4"
   google:
-    tracking_id          :
-
+    tracking_id: "G-Y937474R7Y"
 
 # Reading Files
 include:
