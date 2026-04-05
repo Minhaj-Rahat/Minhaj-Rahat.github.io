@@ -61,7 +61,7 @@ If you want to go deeper on the CPS/IoT relationship and what it means for secur
 
 - **[NIST SP 1900-202: Cyber-Physical Systems and Internet of Things](https://doi.org/10.6028/NIST.SP.1900-202)** by Greer, Burns, Wollman, and Griffor (2019). The foundational document for understanding the CPS/IoT convergence. Covers the history of both terms, analyzes 61 definitions, proposes a unified components and interactions model, and discusses implications for design assurance and cyber-physical security. Free to download.
 
-- **[NIST Cybersecurity for IoT Program](https://www.nist.gov/programs-projects/nist-cybersecurity-iot-program)** for current NIST efforts on IoT security standards and guidelines.
+- **[NIST Cybersecurity for IoT Program](https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program)** for current NIST efforts on IoT security standards and guidelines.
 
 - **[NIST CPS Framework (SP 1500-201)](https://doi.org/10.6028/NIST.SP.1500-201)** for the broader CPS reference architecture, including the Trustworthiness Aspect that covers security, privacy, safety, reliability, and resilience.
 
